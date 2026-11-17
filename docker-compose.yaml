@@ -1,0 +1,12 @@
+name: demo-compose
+
+services:
+  web:
+    build: .
+    container_name: demo-web
+
+    environment:
+      NGINX_HOST: demo.fr
+
+    ports:
+      - "8080:80"
